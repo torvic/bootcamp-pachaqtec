@@ -1,0 +1,24 @@
+{
+  "mascotas": [
+    {
+      "id": 0,
+      "nombre": "Michi",
+      "tipo": "gato"
+    },
+    {
+      "id": 21.456055785737817,
+      "nombre": "Felix",
+      "tipo": "gato"
+    },
+    {
+      "id": 94.32151712973784,
+      "nombre": "Firulais",
+      "tipo": "Perro"
+    },
+    {
+      "id": 54.20229273393444,
+      "nombre": "Kaiser",
+      "tipo": "Perro"
+    }
+  ]
+}
