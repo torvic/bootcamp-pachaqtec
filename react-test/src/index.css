@@ -22,3 +22,69 @@ body {
 button {
   line-height: normal;
 }
+
+/* ============ hero image ============*/
+.hero-image-1 div {
+  background-color: rgba(0, 0, 0, 0.25);
+  min-height: inherit;
+}
+.hero-image-2 div {
+  background-color: rgba(0, 0, 0, 0.25);
+  min-height: inherit;
+}
+.hero-image-3 div {
+  background-color: rgba(0, 0, 0, 0.25);
+  min-height: inherit;
+}
+
+.hero-image-1 {
+  width: inherit;
+  min-height: 60vh;
+  background-image: url('https://placeimg.com/1280/720/animals');
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.hero-image-2 {
+  width: inherit;
+  min-height: 60vh;
+  background-image: url('https://placeimg.com/1280/720/tech');
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.hero-image-3 {
+  width: inherit;
+  min-height: 60vh;
+  background-image: url('https://placeimg.com/1280/720/nature');
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+/* img {
+  opacity: 0.5;
+  background-color: black;
+  width: 100%;
+  height: 470px;
+} */
+
+.hero-image {
+  position: relative;
+}
+
+.content-front {
+  width: 100%;
+  z-index: 999;
+  min-height: 60vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content-front h2 {
+  font-size: 3vh;
+  color: #fff;
+}

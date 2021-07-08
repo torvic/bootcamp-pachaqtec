@@ -66,25 +66,27 @@ const Home = () => {
         </Row>
       </Header>
       <Layout>
-        <Content style={{ height: '300px' }}>
-          <Carousel autoplay>
-            <div>
-              <img src="https://placeimg.com/1300/300/tech" alt="tech" />
+        <Content>
+          <div className="hero-image">
+            <Carousel autoplay>
+              <article className="hero-image-1">
+                <div></div>
+              </article>
+              <article className="hero-image-2">
+                <div></div>
+              </article>
+              <article className="hero-image-3">
+                <div></div>
+              </article>
+            </Carousel>
+            <div className="content-front">
+              <h2>Unete a nuestra comunidad y planea tu viaje a la medida</h2>
+              <Button type="primary">Comienza tu viaje </Button>
             </div>
-            <div>
-              <img src="https://placeimg.com/1300/300/any" alt="any" />
-            </div>
-            <div>
-              <img src="https://placeimg.com/1300/300/animals" alt="animals" />
-            </div>
-          </Carousel>
+          </div>
         </Content>
         <Content>
-          <img
-            src="https://placeimg.com/640/480/any"
-            alt="any"
-            style={{ width: '100%', height: '450px' }}
-          />
+          <div style={{ height: '25%' }}>Hello</div>
         </Content>
         <Content style={{ height: '450px' }}>
           <div className="site-layout-content">
@@ -136,7 +138,7 @@ const Home = () => {
           </div>
         </Content>
       </Layout>
-      <Footer style={{ textAlign: 'center', backgroundColor: 'blue' }}>
+      <Footer style={{ textAlign: 'center', backgroundColor: '#1890ff' }}>
         Ant Design ©2018 Created by Ant UED
       </Footer>
     </Layout>
