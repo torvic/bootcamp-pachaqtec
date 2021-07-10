@@ -68,17 +68,19 @@ const Home = () => {
       <Layout>
         <Content>
           <div className="hero-image">
-            <Carousel autoplay>
-              <article className="hero-image-1">
-                <div></div>
-              </article>
-              <article className="hero-image-2">
-                <div></div>
-              </article>
-              <article className="hero-image-3">
-                <div></div>
-              </article>
-            </Carousel>
+            <div className="carousel">
+              <Carousel autoplay>
+                <div className="hero-image-1">
+                  <div></div>
+                </div>
+                <div className="hero-image-2">
+                  <div></div>
+                </div>
+                <div className="hero-image-3">
+                  <div></div>
+                </div>
+              </Carousel>
+            </div>
             <div className="content-front">
               <h2>Unete a nuestra comunidad y planea tu viaje a la medida</h2>
               <Button type="primary">Comienza tu viaje </Button>
