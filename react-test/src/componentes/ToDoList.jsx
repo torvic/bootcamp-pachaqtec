@@ -1,9 +1,11 @@
 import { useContext, useEffect } from 'react'
 import Store from '../context/ToDoCrudContext'
+import ToDoForm from './ToDoForm'
 
-const HOST_API = "http://localhost:8080/api";
+const HOST_API = 'http://localhost:8080/api'
 
-const ToDoList = () => {
+const ToDoList = ({ el }) => {
+  const { toDo, toDoList } = el
   const {
     dispatch,
     state: { todo },
@@ -53,38 +55,45 @@ const ToDoList = () => {
   }
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <td>ID</td>
-            <td>Tarea</td>
-            <td>¿Completado?</td>
-          </tr>
-        </thead>
-        <tbody>
-          {currentList.map((todo) => {
-            return (
-              <tr key={todo.id} style={todo.completed ? decorationDone : {}}>
-                <td>{todo.id}</td>
-                <td>{todo.name}</td>
-                <td>
-                  <input
-                    type='checkbox'
-                    defaultChecked={todo.completed}
-                    onChange={(event) => onChange(event, todo)}
-                  ></input>
-                </td>
-                <td>
-                  <button onClick={() => onDelete(todo.id)}>Eliminar</button>
-                </td>
-                <td>
-                  <button onClick={() => onEdit(todo)}>Editar</button>
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <fieldset>
+        <legend>
+					{toDo}
+					<button>Eliminar</button>
+				</legend>
+				<ToDoForm/>
+        <table>
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>Tarea</td>
+              <td>¿Completado?</td>
+            </tr>
+          </thead>
+          <tbody>
+            {currentList.map((todo) => {
+              return (
+                <tr key={todo.id} style={todo.completed ? decorationDone : {}}>
+                  <td>{todo.id}</td>
+                  <td>{todo.name}</td>
+                  <td>
+                    <input
+                      type='checkbox'
+                      defaultChecked={todo.completed}
+                      onChange={(event) => onChange(event, todo)}
+                    ></input>
+                  </td>
+                  <td>
+                    <button onClick={() => onDelete(todo.id)}>Eliminar</button>
+                  </td>
+                  <td>
+                    <button onClick={() => onEdit(todo)}>Editar</button>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </fieldset>
     </div>
   )
 }
